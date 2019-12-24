@@ -42,12 +42,12 @@ defmodule Twex.Api do
     get_videos(user_id, client, videos_batch ++ videos, cursor)
   end
 
-  @spec parse_response(response :: OAuth.Response.t()) :: parsed_response()
+  @spec parse_response(response :: OAuth2.Response.t()) :: parsed_response()
   defp parse_response(%OAuth2.Response{body: %{"data" => data} = body}) do
     {data, body["pagination"]["cursor"]}
   end
 
-  @spec get(client :: OAuth.Client.t(), url :: String.t(), params :: Keyword.t()) ::
+  @spec get(client :: OAuth2.Client.t(), url :: String.t(), params :: Keyword.t()) ::
           parsed_response()
   defp get(client, url, params) do
     client
@@ -55,7 +55,7 @@ defmodule Twex.Api do
     |> parse_response()
   end
 
-  @spec name_to_id(username :: String.t(), client :: OAuth.Client.t()) :: String.t()
+  @spec name_to_id(username :: String.t(), client :: OAuth2.Client.t()) :: String.t()
   defp name_to_id(username, client) do
     client
     |> get(@users_url, login: username)
