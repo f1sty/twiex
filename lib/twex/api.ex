@@ -9,7 +9,7 @@ defmodule Twex.Api do
   @users_url "https://api.twitch.tv/helix/users"
   @videos_url "https://api.twitch.tv/helix/videos"
 
-  @type parsed_response :: {[map()], nil | String.t()}
+  @typep parsed_response :: {[map()], nil | String.t()}
 
   @doc """
   Retreive JSON data on all VODs, available for specified `username` streamer.
