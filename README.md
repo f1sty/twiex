@@ -1,6 +1,6 @@
 # Twex
 
-**TODO: Add description**
+Simple Elixir app to get VODs list by selected streamer from [twitch](https://twitch.tv)
 
 ## Installation
 
