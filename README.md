@@ -2,6 +2,9 @@
 
 Simple Elixir app to get VODs list by selected streamer from [twitch](https://twitch.tv)
 
+## TODO
+* Add ability to refresh token
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
